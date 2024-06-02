@@ -1,0 +1,23 @@
++-------------------+       +-------------------+
+|      Book         |       |      Author       |
++-------------------+       +-------------------+
+| ID (PK)           |       | ID (PK)           |
+| Title             |       | Name              |
+| Publication Year  |       +-------------------+
++-------------------+
+       | 1..*          1..*
+       |                  |
+       |                  |
++-------------------+       +-------------------+
+|   Borrowing       |       | Library Member    |
++-------------------+       +-------------------+
+| ID (PK)           |       | ID (PK)           |
+| Due Date          |       | Name              |
+| Return Date       |       +-------------------+
+| Book ID (FK)      |
+| Member ID (FK)    |
++-------------------+
+
+
+**Each book can have multiple authors(one to many relationship)
+**Each borrowing is associated with one book and one library member(many to one relationship)
